@@ -8,6 +8,15 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Frete extends Model
 {
+    protected $fillable = [
+        'codigo_rastreio',
+        'status',
+        'origem',
+        'destino',
+        'remetente_id',
+        'destinatario_id'
+    ];
+    
     protected function casts(): array
     {
         return [
